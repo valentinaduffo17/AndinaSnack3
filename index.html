@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-container":"#eaffd0","on-surface":"#121c2a","secondary-container":"#ffc55f","on-background":"#121c2a","on-secondary-fixed-variant":"#5f4100","surface-container":"#e6eeff","on-error-container":"#93000a","background":"#f8f9ff","tertiary-container":"#b45733","secondary":"#7d5700","outline":"#74796b","surface":"#f8f9ff","on-secondary":"#ffffff","surface-container-high":"#dee9fc","surface-dim":"#d0dbed","on-tertiary-fixed-variant":"#7c2e0c","error-container":"#ffdad6","on-tertiary-container":"#fff6f4","outline-variant":"#c4c8b9","secondary-fixed-dim":"#f5bd58","inverse-surface":"#27313f","primary-container":"#5b7b3a","inverse-on-surface":"#eaf1ff","surface-container-lowest":"#ffffff","primary":"#436224","on-secondary-fixed":"#271900","on-secondary-container":"#755100","tertiary-fixed":"#ffdbcf","primary-fixed":"#c9eea0","primary-fixed-dim":"#aed287","on-primary-fixed":"#0e2000","on-error":"#ffffff","on-tertiary":"#ffffff","secondary-fixed":"#ffdeaa","surface-tint":"#486729","surface-variant":"#d9e3f6","on-primary-fixed-variant":"#314f12","on-tertiary-fixed":"#380d00","surface-container-low":"#eff4ff","tertiary":"#953f1d","on-surface-variant":"#44483c","surface-container-highest":"#d9e3f6","surface-bright":"#f8f9ff","inverse-primary":"#aed287","on-primary":"#ffffff","error":"#ba1a1a","tertiary-fixed-dim":"#ffb59b"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","margin":"2rem","gutter":"1.5rem","gutter-sm":"1rem","margin-sm":"1rem","space-md":"1rem","space-xs":"0.25rem","space-xl":"2rem","space-sm":"0.5rem"},"fontFamily":{"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"kpi-value":["Plus Jakarta Sans"],"label-sm":["Inter"],"body-lg":["Inter"],"display":["Plus Jakarta Sans"],"body-md":["Inter"],"data-mono":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"kpi-value":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"data-mono":["13px",{"lineHeight":"16px","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Logo Andina Snacks" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xbac1-pZGGHvhnRrPtTSZaGDlr5Vp80CeTfpzrZTet6EdM3pNlCZ9lnRxJCaXEUKuZdG8jSeyktYqqFcrAWzbt-KJZhQEKFPfS7p7avCimhyW-AXqQ8OkTBrI0CtkzHXh27CmyvmPJJNsULuZgQf_J8M1gpBREnBoCzK2VrTnOCY6OpH0zeUSX3sk2VYPeKzrEsNbTs42yc6wwyN4aqrRKwPSpabF6RLHgZ48KtMR38M8Yy5W-hvuOlEk"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Andina Snacks</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">BI Platform</span></div></div><div class="px-space-md py-space-xs"><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-[#EBF3E6] text-[#3D5326]"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold truncate">Conexión SAP / ERP Activa</span></div></div><nav class="flex flex-col gap-1 px-space-md mt-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a aria-current="page" class="flex items-center gap-space-sm px-3 py-2.5 transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm" data-path="resumen-ejecutivo" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-body-md text-body-md">Resumen Ejecutivo</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="forecast-2028" href="#"><span class="material-symbols-outlined text-[20px]">trending_up</span><span class="font-body-md text-body-md">Forecast 2028</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventario" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-body-md text-body-md">Inventario</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ventas" href="#"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-body-md text-body-md">Ventas</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pricing" href="#"><span class="material-symbols-outlined text-[20px]">sell</span><span class="font-body-md text-body-md">Pricing</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="promociones" href="#"><span class="material-symbols-outlined text-[20px]">campaign</span><span class="font-body-md text-body-md">Promociones</span></a><a class="flex items-center gap-space-sm px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="configuracion" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md">Configuración</span></a></nav></div><div class="p-space-md flex flex-col gap-space-xs"><div class="bg-surface-container-low p-3 rounded-lg shadow-sm"><div class="flex items-center justify-between mb-1.5"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Cuota Sync Datos</span><span class="font-label-sm text-label-sm text-primary font-bold">94%</span></div><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mb-2"><div class="bg-primary-container h-full w-[94%]"></div></div><div class="flex items-center gap-1.5 text-on-surface-variant"><span class="material-symbols-outlined text-[14px]">sync</span><span class="font-label-sm text-label-sm">Última: hace 4 min</span></div></div><div class="flex items-center justify-between px-1 text-on-surface-variant font-label-sm text-label-sm"><span>Andina BI Suite</span><span>v2.4</span></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-4xl"><div class="relative flex-1 max-w-xs"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-9 pl-9 pr-14 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" placeholder="Buscar SKU, cliente, reporte, lote..." type="text"/><div class="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none"><kbd class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant shadow-xs">Ctrl+K</kbd></div></div><div class="hidden xl:flex items-center gap-space-xs"><div class="flex items-center gap-1.5 px-3 h-9 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-sm cursor-pointer hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span><span class="font-medium">YTD 2025 (Ene - Oct)</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><div class="flex items-center gap-1 px-2.5 h-9 rounded-lg bg-surface-container-lowest text-on-surface-variant font-body-sm text-body-sm shadow-sm cursor-pointer hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[16px]">storefront</span><span>Canales: 5</span><span class="material-symbols-outlined text-[16px]">expand_more</span></div><div class="flex items-center gap-1 px-2.5 h-9 rounded-lg bg-surface-container-lowest text-on-surface-variant font-body-sm text-body-sm shadow-sm cursor-pointer hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[16px]">public</span><span>Perú</span><span class="material-symbols-outlined text-[16px]">expand_more</span></div><div class="flex items-center gap-1 px-2.5 h-9 rounded-lg bg-surface-container-lowest text-on-surface-variant font-body-sm text-body-sm shadow-sm cursor-pointer hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[16px]">category</span><span>7 SKUs</span><span class="material-symbols-outlined text-[16px]">expand_more</span></div></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1 px-2.5 h-9 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm cursor-pointer hover:bg-surface-container-high transition-colors"><span class="font-bold text-primary">S/</span><span class="text-on-surface-variant">PEN</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><button class="relative flex items-center justify-center w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors shadow-sm"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm font-bold">3</span></button><button class="hidden sm:flex items-center gap-1.5 px-3 h-9 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-sm hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px] text-primary">download</span><span class="font-medium">Exportar</span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfw3NesDFH5lmMyOzmupe_Q_rEpIrD-0jGAnMiHP2wpl6HjNymKCgD5RaloCzgqxtko3bocVaYJOCT2fmujLnetGPMLZ_mwRPV08t5WadkY4YYP4G9vIB93Pw52ryI9lZMLg7aIRGZJIcM8O821N2xIGF7i2n7oB_y5XMSPWqXCq0V1kitY6nmT5MFwEFCeyphlssrqXxHThehec9EmO1aDsEIdAz-xmz3EAAnbhUIV81CF1yWrP6-"/><div class="hidden 2xl:flex flex-col text-left"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Carlos Mendoza</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Director Comercial &amp; Supply</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px] cursor-pointer">more_vert</span></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg max-w-[1600px] mx-auto w-full space-y-space-lg">
+<!-- 1. ENCABEZADO DE VISTA -->
+<header class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-sm mb-1.5 flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#EBF3E6] text-[#3D5326] font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            Datos actualizados: Hoy, 08:30 AM
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock_clock</span>
+            Cierre contable preliminar
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-data-mono text-[11px]">
+            T/C Ref: S/ 3.745
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Resumen Ejecutivo de Negocio</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Consolidado de rendimiento comercial, supply chain y proyecciones 2024-2028</p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-1.5 px-3.5 h-10 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-high transition-all duration-150">
+<span class="material-symbols-outlined text-[18px] text-primary">cloud_download</span>
+          Comparar Periodos
+        </button>
+<button class="inline-flex items-center gap-1.5 px-3.5 h-10 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-high transition-all duration-150">
+<span class="material-symbols-outlined text-[18px] text-secondary">summarize</span>
+          Generar Brief Gerencial
+        </button>
+<button class="inline-flex items-center gap-2 px-4 h-10 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm hover:brightness-105 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+          Descargar Datos
+        </button>
+</div>
+</header>
+<!-- 2. FILA DE 5 TARJETAS KPI -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Tarjeta 1: Ventas YTD -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow duration-200">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Ventas YTD</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant cursor-pointer hover:text-on-surface">info</span>
+</div>
+<div class="font-kpi-value text-kpi-value text-on-surface tabular-nums">S/ 14,850,240</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#EBF3E6] text-[#3D5326] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px] mr-0.5">trending_up</span>+18.4%
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs 2024</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container">
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant mb-1.5">
+<span class="font-label-sm text-label-sm">Meta YTD</span>
+<span class="font-data-mono font-bold text-on-surface">94.2%</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 94.2%;"></div>
+</div>
+</div>
+</div>
+<!-- Tarjeta 2: Unidades Vendidas -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow duration-200">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Unidades Vendidas</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant cursor-pointer hover:text-on-surface">info</span>
+</div>
+<div class="font-kpi-value text-kpi-value text-on-surface tabular-nums">3,420,150 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">und</span></div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#EBF3E6] text-[#3D5326] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px] mr-0.5">trending_up</span>+14.1%
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs 2024</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Promedio mensual</span>
+<span class="font-data-mono font-bold text-on-surface">342k und</span>
+</div>
+</div>
+<!-- Tarjeta 3: Margen Bruto % -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow duration-200">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Margen Bruto %</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant cursor-pointer hover:text-on-surface">info</span>
+</div>
+<div class="font-kpi-value text-kpi-value text-on-surface tabular-nums">41.8%</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#EBF3E6] text-[#3D5326] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px] mr-0.5">trending_up</span>+2.3 pp
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs 2024</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container">
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant mb-1.5">
+<span class="font-label-sm text-label-sm">Target anual: 40.0%</span>
+<span class="font-label-sm text-label-sm text-[#3D5326] font-bold">Cumplido</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+<!-- Tarjeta 4: Días de Inventario (DOH) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow duration-200">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Días Inventario (DOH)</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant cursor-pointer hover:text-on-surface">info</span>
+</div>
+<div class="font-kpi-value text-kpi-value text-on-surface tabular-nums">28.4 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">días</span></div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#EBF3E6] text-[#3D5326] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px] mr-0.5">arrow_downward</span>-4.2 días
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Mejora rotación</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Rango óptimo</span>
+<span class="font-data-mono font-bold text-on-surface">25 – 32 días</span>
+</div>
+</div>
+<!-- Tarjeta 5: Precio Promedio por Unidad -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow duration-200">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Precio Promedio / Und</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant cursor-pointer hover:text-on-surface">info</span>
+</div>
+<div class="font-kpi-value text-kpi-value text-on-surface tabular-nums">S/ 4.34</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#EBF3E6] text-[#3D5326] font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px] mr-0.5">trending_up</span>+3.8%
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Mix pops 120g</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Benchmark mercado</span>
+<span class="font-data-mono font-bold text-on-surface">S/ 4.15</span>
+</div>
+</div>
+</section>
+<!-- 3. GRID PRINCIPAL (8 COLS / 4 COLS) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- COLUMNA IZQUIERDA (8 COLUMNAS): Forecast 2024-2028 y Barras Apiladas por Canal -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- 3.A Gráfico de Líneas Grande: Forecast 2024 - 2028 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">Evolución y Proyección de Ventas (2024 – 2028)</h2>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">Modelo ARIMA-X</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">En millones de Soles (S/ MM) a precios constantes</p>
+</div>
+<div class="flex items-center gap-2 flex-wrap">
+<!-- Selector Soles / Unidades -->
+<div class="inline-flex p-0.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-semibold shadow-xs" id="btn-currency">Soles (S/)</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface" id="btn-units">Unidades</button>
+</div>
+<!-- Toggle Banda de Confianza -->
+<label class="flex items-center gap-2 cursor-pointer pl-1 text-on-surface-variant hover:text-on-surface select-none">
+<input checked="" class="accent-primary-container h-4 w-4 rounded cursor-pointer" id="toggle-confidence" type="checkbox"/>
+<span class="font-label-sm text-label-sm font-medium">Banda 95%</span>
+</label>
+</div>
+</div>
+<!-- SVG Data Viz -->
+<div class="relative w-full h-[320px] pt-4 select-none">
+<svg class="w-full h-full overflow-visible" viewbox="0 0 800 280">
+<defs>
+<!-- Gradiente de área histórica -->
+<lineargradient id="realGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#5B7B3A" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#5B7B3A" stop-opacity="0.0"></stop>
+</lineargradient>
+<!-- Gradiente de banda de confianza 95% -->
+<lineargradient id="ciGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#7D5700" stop-opacity="0.18"></stop>
+<stop offset="100%" stop-color="#7D5700" stop-opacity="0.02"></stop>
+</lineargradient>
+</defs>
+<!-- Eje Y Lineas guía de fondo -->
+<line stroke="#E6EEFF" stroke-dasharray="3 3" stroke-width="1" x1="40" x2="760" y1="40" y2="40"></line>
+<text fill="#74796B" font-family="Inter" font-size="11" text-anchor="end" x="30" y="44">S/ 40M</text>
+<line stroke="#E6EEFF" stroke-dasharray="3 3" stroke-width="1" x1="40" x2="760" y1="100" y2="100"></line>
+<text fill="#74796B" font-family="Inter" font-size="11" text-anchor="end" x="30" y="104">S/ 30M</text>
+<line stroke="#E6EEFF" stroke-dasharray="3 3" stroke-width="1" x1="40" x2="760" y1="160" y2="160"></line>
+<text fill="#74796B" font-family="Inter" font-size="11" text-anchor="end" x="30" y="164">S/ 20M</text>
+<line stroke="#E6EEFF" stroke-dasharray="3 3" stroke-width="1" x1="40" x2="760" y1="220" y2="220"></line>
+<text fill="#74796B" font-family="Inter" font-size="11" text-anchor="end" x="30" y="224">S/ 10M</text>
+<!-- Área de Banda de Confianza 95% (2025 cierre -> 2028) -->
+<polygon fill="url(#ciGradient)" id="ci-polygon" points="360,175 480,140 600,98 720,59 720,99 600,138 480,176 360,175"></polygon>
+<path d="M 360 175 L 480 140 L 600 98 L 720 59" fill="none" id="ci-path-top" opacity="0.6" stroke="#D9A441" stroke-dasharray="2 3" stroke-width="1"></path>
+<path d="M 360 175 L 480 176 L 600 138 L 720 99" fill="none" id="ci-path-bottom" opacity="0.6" stroke="#D9A441" stroke-dasharray="2 3" stroke-width="1"></path>
+<!-- Sombreado área real -->
+<path d="M 80 213 L 220 191 L 360 175 L 360 250 L 80 250 Z" fill="url(#realGradient)"></path>
+<!-- Línea Histórica / Real (2024 -> Q4 2025) -->
+<path d="M 80 213 L 220 191 L 360 175" fill="none" stroke="#436224" stroke-linecap="round" stroke-width="3"></path>
+<!-- Línea Forecast Base (Q4 2025 -> 2028) -->
+<path d="M 360 175 L 480 152 L 600 119 L 720 79" fill="none" stroke="#5B7B3A" stroke-dasharray="6 6" stroke-linecap="round" stroke-width="3"></path>
+<!-- Línea Vertical Divisoria: Hoy (Q4 2025) -->
+<line stroke="#7D5700" stroke-dasharray="4 4" stroke-width="1.5" x1="360" x2="360" y1="20" y2="245"></line>
+<!-- Nodos / Data points Reales -->
+<!-- 2024: 11.2M -->
+<circle class="cursor-pointer hover:r-6 transition-all" cx="80" cy="213" fill="#436224" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<text fill="#121C2A" font-family="Plus Jakarta Sans" font-size="11" font-weight="600" text-anchor="middle" x="80" y="200">S/ 11.2M</text>
+<!-- 2025 YTD actual: 14.8M -->
+<circle class="cursor-pointer hover:r-6 transition-all" cx="220" cy="191" fill="#436224" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<text fill="#121C2A" font-family="Plus Jakarta Sans" font-size="11" font-weight="600" text-anchor="middle" x="220" y="178">S/ 14.8M</text>
+<!-- 2025 Proyección cierre: 17.5M -->
+<circle class="cursor-pointer hover:r-7 transition-all" cx="360" cy="175" fill="#7D5700" r="6" stroke="#ffffff" stroke-width="2"></circle>
+<text fill="#7D5700" font-family="Plus Jakarta Sans" font-size="11" font-weight="700" text-anchor="middle" x="360" y="162">S/ 17.5M</text>
+<!-- 2026 Forecast: 21.4M -->
+<circle class="cursor-pointer hover:r-6 transition-all" cx="480" cy="152" fill="#5B7B3A" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<text fill="#121C2A" font-family="Plus Jakarta Sans" font-size="11" font-weight="600" text-anchor="middle" x="480" y="139">S/ 21.4M</text>
+<!-- 2027 Forecast: 26.8M -->
+<circle class="cursor-pointer hover:r-6 transition-all" cx="600" cy="119" fill="#5B7B3A" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<text fill="#121C2A" font-family="Plus Jakarta Sans" font-size="11" font-weight="600" text-anchor="middle" x="600" y="106">S/ 26.8M</text>
+<!-- 2028 Forecast: 33.5M -->
+<circle class="cursor-pointer hover:r-7 transition-all" cx="720" cy="79" fill="#5B7B3A" r="6" stroke="#ffffff" stroke-width="2"></circle>
+<text fill="#436224" font-family="Plus Jakarta Sans" font-size="12" font-weight="700" text-anchor="middle" x="720" y="66">S/ 33.5M</text>
+<text fill="#7D5700" font-family="Inter" font-size="10" text-anchor="middle" x="720" y="44">[S/ 30.2M - 36.8M]</text>
+<!-- Eje X Labels -->
+<text fill="#44483C" font-family="Inter" font-size="12" font-weight="600" text-anchor="middle" x="80" y="265">2024</text>
+<text fill="#44483C" font-family="Inter" font-size="12" font-weight="600" text-anchor="middle" x="220" y="265">YTD 2025</text>
+<text fill="#7D5700" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle" x="360" y="265">Cierre 2025*</text>
+<text fill="#44483C" font-family="Inter" font-size="12" font-weight="600" text-anchor="middle" x="480" y="265">2026 (F)</text>
+<text fill="#44483C" font-family="Inter" font-size="12" font-weight="600" text-anchor="middle" x="600" y="265">2027 (F)</text>
+<text fill="#44483C" font-family="Inter" font-size="12" font-weight="600" text-anchor="middle" x="720" y="265">2028 (F)</text>
+</svg>
+<!-- Badge destacado sobre el punto "Hoy" -->
+<div class="absolute top-2 left-[45%] -translate-x-1/2 flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#FAF3E7] text-[#8A651E] shadow-xs border border-secondary/20">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-label-sm font-bold">Hoy (Q4 2025)</span>
+</div>
+</div>
+<!-- Leyenda interactiva -->
+<div class="flex items-center justify-between pt-space-md border-t border-surface-container flex-wrap gap-space-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-1 bg-[#436224] rounded-full"></span>
+<span class="font-label-md text-label-md text-on-surface">Venta Real (2024 - YTD)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-0.5 bg-primary-container border-b-2 border-dashed border-primary-container"></span>
+<span class="font-label-md text-label-md text-on-surface">Forecast Base (CAGR +26.3%)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-[#FAF3E7] rounded-sm border border-secondary/30"></span>
+<span class="font-label-md text-label-md text-on-surface">Intervalo 95% Confianza</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Próxima recalibración: 15 Nov 2025</span>
+</div>
+</div>
+<!-- 3.B Gráfico de Barras Apiladas: Ventas por Canal -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Ventas por Canal de Distribución</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Participación ponderada y performance comercial 2025</p>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-lg text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">layers</span>
+              Consolidado 5 canales
+            </div>
+</div>
+<!-- Visualización Stacked Bar Trimestral -->
+<div class="space-y-3 mb-space-lg">
+<!-- Barra macro YTD -->
+<div>
+<div class="flex justify-between items-center mb-1 text-label-sm">
+<span class="font-semibold text-on-surface uppercase tracking-wider">Mix YTD Actual (S/ 14.85M)</span>
+<span class="text-on-surface-variant">100% Cobertura</span>
+</div>
+<div class="w-full h-8 rounded-lg overflow-hidden flex shadow-xs cursor-pointer">
+<div class="bg-[#436224] hover:opacity-90 flex items-center justify-center text-white text-[11px] font-semibold" style="width: 42%;" title="Supermercados: 42% (S/ 6.24M)">42%</div>
+<div class="bg-[#5B7B3A] hover:opacity-90 flex items-center justify-center text-white text-[11px] font-semibold" style="width: 28%;" title="Bodegas y Tradicional: 28% (S/ 4.16M)">28%</div>
+<div class="bg-[#D9A441] hover:opacity-90 flex items-center justify-center text-[#271900] text-[11px] font-semibold" style="width: 12%;" title="E-commerce: 12% (S/ 1.78M)">12%</div>
+<div class="bg-[#7D5700] hover:opacity-90 flex items-center justify-center text-white text-[11px] font-semibold" style="width: 11%;" title="Farmacias &amp; Conveniencia: 11% (S/ 1.63M)">11%</div>
+<div class="bg-[#B45733] hover:opacity-90 flex items-center justify-center text-white text-[11px] font-semibold" style="width: 7%;" title="Exportación: 7% (S/ 1.04M)">7%</div>
+</div>
+</div>
+<!-- Evolución Trimestral Q1, Q2, Q3, Q4(est) -->
+<div class="grid grid-cols-4 gap-space-sm pt-2 text-center">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Q1 Real</span>
+<div class="w-full h-3 rounded-full overflow-hidden flex mt-1 bg-surface-container">
+<div class="bg-[#436224]" style="width: 44%;"></div>
+<div class="bg-[#5B7B3A]" style="width: 29%;"></div>
+<div class="bg-[#D9A441]" style="width: 10%;"></div>
+<div class="bg-[#7D5700]" style="width: 11%;"></div>
+<div class="bg-[#B45733]" style="width: 6%;"></div>
+</div>
+<span class="font-data-mono text-[11px] text-on-surface font-semibold mt-1 block">S/ 3.2M</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Q2 Real</span>
+<div class="w-full h-3 rounded-full overflow-hidden flex mt-1 bg-surface-container">
+<div class="bg-[#436224]" style="width: 42%;"></div>
+<div class="bg-[#5B7B3A]" style="width: 28%;"></div>
+<div class="bg-[#D9A441]" style="width: 12%;"></div>
+<div class="bg-[#7D5700]" style="width: 11%;"></div>
+<div class="bg-[#B45733]" style="width: 7%;"></div>
+</div>
+<span class="font-data-mono text-[11px] text-on-surface font-semibold mt-1 block">S/ 3.7M</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Q3 Real</span>
+<div class="w-full h-3 rounded-full overflow-hidden flex mt-1 bg-surface-container">
+<div class="bg-[#436224]" style="width: 41%;"></div>
+<div class="bg-[#5B7B3A]" style="width: 27%;"></div>
+<div class="bg-[#D9A441]" style="width: 13%;"></div>
+<div class="bg-[#7D5700]" style="width: 11%;"></div>
+<div class="bg-[#B45733]" style="width: 8%;"></div>
+</div>
+<span class="font-data-mono text-[11px] text-on-surface font-semibold mt-1 block">S/ 4.3M</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Q4 Proy.</span>
+<div class="w-full h-3 rounded-full overflow-hidden flex mt-1 bg-surface-container">
+<div class="bg-[#436224]" style="width: 40%;"></div>
+<div class="bg-[#5B7B3A]" style="width: 27%;"></div>
+<div class="bg-[#D9A441]" style="width: 14%;"></div>
+<div class="bg-[#7D5700]" style="width: 11%;"></div>
+<div class="bg-[#B45733]" style="width: 8%;"></div>
+</div>
+<span class="font-data-mono text-[11px] text-secondary font-bold mt-1 block">S/ 6.3M (est)</span>
+</div>
+</div>
+</div>
+<!-- Desglose en Detalle por Canal -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-sm pt-space-sm border-t border-surface-container">
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#436224]"></span>
+<span class="font-label-md text-label-md text-on-surface">Supermercados</span>
+</div>
+<span class="font-data-mono font-bold text-on-surface">42.0%</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface tabular-nums">S/ 6,237,100</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1">Plaza Vea, Wong, Metro, Tottus, Vivanda</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#5B7B3A]"></span>
+<span class="font-label-md text-label-md text-on-surface">Bodegas / Tradicional</span>
+</div>
+<span class="font-data-mono font-bold text-on-surface">28.0%</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface tabular-nums">S/ 4,158,067</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1">Red distribuidores mayoristas Lima y Provincias</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#D9A441]"></span>
+<span class="font-label-md text-label-md text-on-surface">E-commerce</span>
+</div>
+<span class="font-data-mono font-bold text-on-surface">12.0%</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface tabular-nums">S/ 1,782,028</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1">DTC andinasnacks.pe + PedidosYa / Rappi</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#7D5700]"></span>
+<span class="font-label-md text-label-md text-on-surface">Farmacias &amp; Convi</span>
+</div>
+<span class="font-data-mono font-bold text-on-surface">11.0%</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface tabular-nums">S/ 1,633,526</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1">Tambo, Oxxo, Inkafarma, Mifarma</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col justify-between md:col-span-2 lg:col-span-2">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#B45733]"></span>
+<span class="font-label-md text-label-md text-on-surface">Exportación Directa</span>
+</div>
+<span class="font-data-mono font-bold text-on-surface">7.0%</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface tabular-nums">S/ 1,039,516</span>
+<span class="font-label-sm text-[#3D5326] bg-[#EBF3E6] px-2 py-0.5 rounded font-bold">+31.2% YoY</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1">Chile (Jumbo), Colombia (Carulla) y EE.UU. nicho specialty</span>
+</div>
+</div>
+</div>
+</div>
+<!-- COLUMNA DERECHA (4 COLUMNAS): Distribución Geográfica y Alertas Operativas -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- 3.D Panel Lateral de Alertas Críticas (Actionable Alerts) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-error animate-pulse"></div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Alertas Operativas</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+              3 prioritarias
+            </span>
+</div>
+<div class="space-y-space-md">
+<!-- Alerta 1: Crítica Terracota -->
+<div class="p-space-md rounded-xl bg-[#F9ECE7] border-l-4 border-tertiary">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5 text-tertiary">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wide">Quiebre Inminente (4 días)</span>
+</div>
+<span class="font-data-mono text-[11px] font-semibold text-tertiary">SKU #QNC-030</span>
+</div>
+<h3 class="font-body-md text-body-md font-bold text-[#8A3B1E] mt-1">Barra Quinua &amp; Cacao 30g</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Almacén Central Lurín cuenta con <strong class="text-on-surface font-semibold">4,200 unds</strong> vs demanda semanal proyectada de <strong class="text-on-surface font-semibold">18,500 unds</strong> en Supermercados.
+              </p>
+<button class="mt-3 w-full py-2 px-3 rounded-lg bg-tertiary hover:bg-[#7C2E0C] text-on-tertiary font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+                Priorizar Orden de Producción #842
+              </button>
+</div>
+<!-- Alerta 2: Ocre / Advertencia -->
+<div class="p-space-md rounded-xl bg-[#FAF3E7] border-l-4 border-secondary">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">inventory</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wide">Sobrestock Regional</span>
+</div>
+<span class="font-data-mono text-[11px] font-semibold text-secondary">Arequipa Hub</span>
+</div>
+<h3 class="font-body-md text-body-md font-bold text-[#8A651E] mt-1">Pops Kiwicha Miel 120g</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+<strong class="text-on-surface font-semibold">68 días</strong> de cobertura en almacén regional (umbral máx: 35 días). Riesgo de merma por vida útil.
+              </p>
+<button class="mt-3 w-full py-2 px-3 rounded-lg bg-[#FAF3E7] border border-secondary/40 hover:bg-[#F3E6D0] text-[#755100] font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">campaign</span>
+                Activar Promoción Regional
+              </button>
+</div>
+<!-- Alerta 3: Comercial / Finalización -->
+<div class="p-space-md rounded-xl bg-surface-container-low border-l-4 border-primary-container">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">event_upcoming</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wide">Fin de Campaña Promocional</span>
+</div>
+<span class="font-data-mono text-[11px] font-semibold text-primary">Wong / Vivanda</span>
+</div>
+<h3 class="font-body-md text-body-md font-bold text-on-surface mt-1">Campaña "Vuelta Saludable"</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Concluye en 3 días (31 de Octubre). Rendimiento actual al <strong class="text-[#3D5326] font-semibold">114%</strong> de la cuota comprometida.
+              </p>
+<button class="mt-3 w-full py-2 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">analytics</span>
+                Ver Informe de ROI
+              </button>
+</div>
+</div>
+</div>
+<!-- 3.C Distribución Geográfica de Ventas (Perú) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Distribución Geográfica</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rendimiento por plaza regional (Perú)</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[22px]">public</span>
+</div>
+<!-- Barras Horizontales con crecimiento YoY -->
+<div class="space-y-space-md">
+<!-- Lima Metropolitana & Callao -->
+<div>
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Lima Metropolitana &amp; Callao</span>
+<div class="flex items-center gap-2">
+<span class="font-data-mono font-bold text-on-surface">S/ 8.46M</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">57.0%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 57%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1 text-[11px] text-on-surface-variant">
+<span>Concentración autoservicios</span>
+<span class="text-[#3D5326] font-semibold">+16.2% YoY</span>
+</div>
+</div>
+<!-- Arequipa -->
+<div>
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Arequipa (Sur)</span>
+<div class="flex items-center gap-2">
+<span class="font-data-mono font-bold text-on-surface">S/ 2.08M</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14.0%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 14%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1 text-[11px] text-on-surface-variant">
+<span>Canal tradicional líder</span>
+<span class="text-[#3D5326] font-bold bg-[#EBF3E6] px-1.5 rounded">+22.0% YoY</span>
+</div>
+</div>
+<!-- La Libertad (Trujillo) -->
+<div>
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">La Libertad (Trujillo)</span>
+<div class="flex items-center gap-2">
+<span class="font-data-mono font-bold text-on-surface">S/ 1.48M</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10.0%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-[#5B7B3A]/80 h-full rounded-full" style="width: 10%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1 text-[11px] text-on-surface-variant">
+<span>Hub Norte</span>
+<span class="text-[#3D5326] font-semibold">+12.5% YoY</span>
+</div>
+</div>
+<!-- Piura -->
+<div>
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Piura</span>
+<div class="flex items-center gap-2">
+<span class="font-data-mono font-bold text-on-surface">S/ 0.89M</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">6.0%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-[#5B7B3A]/60 h-full rounded-full" style="width: 6%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1 text-[11px] text-on-surface-variant">
+<span>Expansión conveniencia</span>
+<span class="text-[#3D5326] font-semibold">+9.8% YoY</span>
+</div>
+</div>
+<!-- Cusco -->
+<div>
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Cusco</span>
+<div class="flex items-center gap-2">
+<span class="font-data-mono font-bold text-on-surface">S/ 0.74M</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5.0%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 5%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1 text-[11px] text-on-surface-variant">
+<span>Canal gourmet &amp; turismo</span>
+<span class="text-[#3D5326] font-bold bg-[#EBF3E6] px-1.5 rounded">+19.0% YoY</span>
+</div>
+</div>
+<!-- Junín (Huancayo) -->
+<div>
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Junín (Huancayo)</span>
+<div class="flex items-center gap-2">
+<span class="font-data-mono font-bold text-on-surface">S/ 0.59M</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4.0%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-[#5B7B3A]/40 h-full rounded-full" style="width: 4%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1 text-[11px] text-on-surface-variant">
+<span>Zona de acopio y origen</span>
+<span class="text-[#3D5326] font-semibold">+8.4% YoY</span>
+</div>
+</div>
+<!-- Otras Regiones -->
+<div>
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Otras Regiones (Ica, Lambayeque, Puno)</span>
+<div class="flex items-center gap-2">
+<span class="font-data-mono font-bold text-on-surface">S/ 0.61M</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4.0%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-surface-variant h-full rounded-full" style="width: 4%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Puntos de Venta Activos</span>
+<span class="font-data-mono font-bold text-on-surface">4,820 PDVs</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PIE INFORMATIVO DE CUMPLIMIENTO Y METADATOS DE INTEGRACIÓN -->
+<footer class="p-space-md rounded-xl bg-surface-container-low flex flex-col md:flex-row items-center justify-between text-body-sm text-on-surface-variant gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Validación cruzada: Contabilidad SAP S/4HANA vs. POS Nielsen IQ completada con 0 discrepancias de conciliación.</span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<span>Próximo corte: 31 Octubre 23:59 PET</span>
+<a class="text-primary hover:underline font-semibold flex items-center gap-1" href="#">
+          Ver Log de Auditoría
+          <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</footer>
+</div>
+</div>
+<script>
+  // Micro-interacción: Toggle de Banda de Confianza en el gráfico Forecast
+  const toggleCI = document.getElementById('toggle-confidence');
+  const ciPolygon = document.getElementById('ci-polygon');
+  const ciPathTop = document.getElementById('ci-path-top');
+  const ciPathBottom = document.getElementById('ci-path-bottom');
+
+  if (toggleCI && ciPolygon) {
+    toggleCI.addEventListener('change', (e) => {
+      const displayState = e.target.checked ? 'block' : 'none';
+      ciPolygon.style.display = displayState;
+      if (ciPathTop) ciPathTop.style.display = displayState;
+      if (ciPathBottom) ciPathBottom.style.display = displayState;
+    });
+  }
+
+  // Micro-interacción: Selector de Unidad / Moneda
+  const btnCurrency = document.getElementById('btn-currency');
+  const btnUnits = document.getElementById('btn-units');
+
+  if (btnCurrency && btnUnits) {
+    btnCurrency.addEventListener('click', () => {
+      btnCurrency.className = "px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-semibold shadow-xs";
+      btnUnits.className = "px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface";
+    });
+
+    btnUnits.addEventListener('click', () => {
+      btnUnits.className = "px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-semibold shadow-xs";
+      btnCurrency.className = "px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface";
+    });
+  }
+</script></main></div></body></html>
